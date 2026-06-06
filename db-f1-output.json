@@ -1,0 +1,64 @@
+{
+    "detections": [
+      {
+        "id": 1,
+        "label": "Add & Norm",
+        "bbox": [513, 225, 635, 267],
+        "approximate": true
+      },
+      {
+        "id": 2,
+        "label": "Feed Forward",
+        "bbox": [513, 269, 635, 329],
+        "approximate": true
+      },
+      {
+        "id": 3,
+        "label": "Add & Norm",
+        "bbox": [513, 357, 635, 397],
+        "approximate": true
+      },
+      {
+        "id": 4,
+        "label": "Multi-Head Attention",
+        "bbox": [513, 399, 635, 457],
+        "approximate": true
+      },
+      {
+        "id": 5,
+        "label": "Add & Norm",
+        "bbox": [513, 491, 635, 531],
+        "approximate": true
+      },
+      {
+        "id": 6,
+        "label": "Multi-Head Attention",
+        "bbox": [513, 533, 635, 631],
+        "approximate": true
+      },
+      {
+        "id": 7,
+        "label": "Add & Norm",
+        "bbox": [331, 371, 443, 411],
+        "approximate": true
+      },
+      {
+        "id": 8,
+        "label": "Feed Forward",
+        "bbox": [331, 413, 443, 471],
+        "approximate": true
+      },
+      {
+        "id": 9,
+        "label": "Add & Norm",
+        "bbox": [331, 501, 443, 541],
+        "approximate": true
+      },
+      {
+        "id": 10,
+        "label": "Multi-Head Attention",
+        "bbox": [331, 543, 443, 601],
+        "approximate": true
+      }
+    ]
+  }

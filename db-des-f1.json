@@ -1,0 +1,19 @@
+{
+    "components": [
+      {"id": 1, "label": "Add & Norm", "position_desc": "top-right"},
+      {"id": 2, "label": "Feed Forward", "position_desc": "top-right"},
+      {"id": 3, "label": "Add & Norm", "position_desc": "middle-right"},
+      {"id": 4, "label": "Multi-Head Attention", "position_desc": "middle-right"},
+      {"id": 5, "label": "Add & Norm", "position_desc": "bottom-right"},
+      {"id": 6, "label": "Multi-Head Attention", "position_desc": "bottom-right"},
+      {"id": 7, "label": "Add & Norm", "position_desc": "top-left"},
+      {"id": 8, "label": "Feed Forward", "position_desc": "top-left"},
+      {"id": 9, "label": "Add & Norm", "position_desc": "bottom-left"},
+      {"id": 10, "label": "Multi-Head Attention", "position_desc": "bottom-left"}
+    ],
+    "counts": {
+      "Multi-Head Attention": 3,
+      "Feed Forward": 2,
+      "Add & Norm": 5
+    }
+  }

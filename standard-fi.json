@@ -1,0 +1,91 @@
+{
+  "image": "figure1.png",
+  "components": [
+    {
+      "id": "gt_1",
+      "name": "Multi-Head Attention",
+      "bbox": [532, 608, 687, 669],
+      "parent": "encoder",
+      "side": "left",
+      "vert": "bottom",
+      "order_in_side": 3
+    },
+    {
+      "id": "gt_2",
+      "name": "Feed Forward",
+      "bbox": [534, 450, 691, 505],
+      "parent": "encoder",
+      "side": "left",
+      "vert": "middle",
+      "order_in_side": 1
+    },
+    {
+      "id": "gt_3",
+      "name": "Add & Norm",
+      "bbox": [535, 414, 686, 437],
+      "parent": "encoder",
+      "side": "left",
+      "vert": "top",
+      "order_in_side": 0
+    },
+    {
+      "id": "gt_4",
+      "name": "Add & Norm",
+      "bbox": [535, 568, 686, 596],
+      "parent": "encoder",
+      "side": "left",
+      "vert": "bottom",
+      "order_in_side": 2
+    },
+    {
+      "id": "gt_5",
+      "name": "Multi-Head Attention",
+      "bbox": [768, 423, 923, 483],
+      "parent": "decoder",
+      "side": "right",
+      "vert": "middle",
+      "order_in_side": 3
+    },
+    {
+      "id": "gt_6",
+      "name": "Feed Forward",
+      "bbox": [766, 288, 919, 349],
+      "parent": "decoder",
+      "side": "right",
+      "vert": "top",
+      "order_in_side": 1
+    },
+    {
+      "id": "gt_7",
+      "name": "Add & Norm",
+      "bbox": [765, 249, 919, 279],
+      "parent": "decoder",
+      "side": "right",
+      "vert": "top",
+      "order_in_side": 0
+    },
+    {
+      "id": "gt_8",
+      "name": "Add & Norm",
+      "bbox": [765, 386, 919, 412],
+      "parent": "decoder",
+      "side": "right",
+      "vert": "middle",
+      "order_in_side": 2
+    },
+    {
+      "id": "gt_9",
+      "name": "Add & Norm",
+      "bbox": [765, 544, 919, 572],
+      "parent": "decoder",
+      "side": "right",
+      "vert": "bottom",
+      "order_in_side": 4
+    }
+  ],
+  "counts": {
+    "Multi-Head Attention": 2,
+    "Feed Forward": 2,
+    "Add & Norm": 5
+  }
+}

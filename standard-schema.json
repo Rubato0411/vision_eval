@@ -1,0 +1,103 @@
+{
+  "_schema": "standard-schema.json — 标准数据协议模板",
+  "_version": "1.0",
+  "_description": "手动填写此模板以定义 Ground Truth。每个组件需填写 label、region（语义区域）、parent（所在模块）、order（在同 parent 内的序号）。填写完毕后，评估脚本可直接使用，不再依赖 bbox 推导。",
+
+  "components": [
+    {
+      "id": 1,
+      "label": "Multi-Head Attention",
+      "region": "bottom-left",
+      "parent": "encoder",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "label": "Add & Norm",
+      "region": "middle-left",
+      "parent": "encoder",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "label": "Feed Forward",
+      "region": "middle-left",
+      "parent": "encoder",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "label": "Add & Norm",
+      "region": "top-left",
+      "parent": "encoder",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "label": "Masked Multi-Head Attention",
+      "region": "bottom-right",
+      "parent": "decoder",
+      "order": 1
+    },
+    {
+      "id": 6,
+      "label": "Add & Norm",
+      "region": "bottom-right",
+      "parent": "decoder",
+      "order": 2
+    },
+    {
+      "id": 7,
+      "label": "Multi-Head Attention",
+      "region": "middle-right",
+      "parent": "decoder",
+      "order": 3
+    },
+    {
+      "id": 8,
+      "label": "Add & Norm",
+      "region": "middle-right",
+      "parent": "decoder",
+      "order": 4
+    },
+    {
+      "id": 9,
+      "label": "Feed Forward",
+      "region": "top-right",
+      "parent": "decoder",
+      "order": 5
+    },
+    {
+      "id": 10,
+      "label": "Add & Norm",
+      "region": "top-right",
+      "parent": "decoder",
+      "order": 6
+    }
+  ],
+
+  "connections": [
+    {"from": "Multi-Head Attention", "to": "Add & Norm", "parent": "encoder"},
+    {"from": "Add & Norm", "to": "Feed Forward", "parent": "encoder"},
+    {"from": "Feed Forward", "to": "Add & Norm", "parent": "encoder"},
+    {"from": "Masked Multi-Head Attention", "to": "Add & Norm", "parent": "decoder"},
+    {"from": "Add & Norm", "to": "Multi-Head Attention", "parent": "decoder"},
+    {"from": "Multi-Head Attention", "to": "Add & Norm", "parent": "decoder"},
+    {"from": "Add & Norm", "to": "Feed Forward", "parent": "decoder"},
+    {"from": "Feed Forward", "to": "Add & Norm", "parent": "decoder"}
+  ],
+
+  "parents": {
+    "encoder": {"side": "left", "description": "编码器模块"},
+    "decoder": {"side": "right", "description": "解码器模块"}
+  },
+
+  "regions": {
+    "top-left":    {"vert": "top",    "horiz": "left"},
+    "middle-left": {"vert": "middle", "horiz": "left"},
+    "bottom-left": {"vert": "bottom", "horiz": "left"},
+    "top-right":    {"vert": "top",    "horiz": "right"},
+    "middle-right": {"vert": "middle", "horiz": "right"},
+    "bottom-right": {"vert": "bottom", "horiz": "right"}
+  }
+}
